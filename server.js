@@ -87,7 +87,7 @@ socket.on('disconnect',function(){
 });//END_IO.ON
 
 
-http.listen(listen(process.env.PORT || 3000, function(){
+http.listen(listen.process.env.PORT || 3000, function(){
 
 console.log('server listen on 3000!');
 
