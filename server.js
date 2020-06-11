@@ -2,16 +2,9 @@ var express = require('express');
 
 var app = express();
 
-var server = app.listen(3000);
+var http = require('http').Server(app);
 
-
-var io = require('socket.io').listen(server);
-
-
-
-
-
-var server = app.listen (3000);
+var io = require('socket.io')(http);
 
 var clientLookup = {};
 
@@ -92,12 +85,9 @@ socket.on('disconnect',function(){
 });//END_SOCKET.ON
 
 });//END_IO.ON
-var io = require('socket.io').listen(server);
+
 
 http.listen(3000, function(){
-
-  
- 
 
 console.log('server listen on 3000!');
 
