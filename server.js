@@ -6,6 +6,8 @@ var http = require('http').Server(app);
 
 var io = require('socket.io')(http);
 
+var io = require ('socket.io'). listen (server);
+
 var clientLookup = {};
 
 io.on('connection', function(socket){
@@ -88,7 +90,7 @@ socket.on('disconnect',function(){
 
 
 http.listen(3000, function(){
-
+var server = app.listen (3000);
 console.log('server listen on 3000!');
 
 });
