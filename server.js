@@ -2,11 +2,13 @@ var express = require('express');
 
 var app = express();
 
-var http = require('http').Server(app);
+var server = app.listen(3000);
+
+
+var io = require('socket.io').listen(server);
 
 
 
-var io = require ('socket.io'). listen (server);
 
 
 var server = app.listen (3000);
